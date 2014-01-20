@@ -2,8 +2,8 @@
 
 require_once("readprop.php");
 
-$properties = readprop("data.txt");
+$res = readprop("data.txt");
 
-print_r($properties);
+print_r($res);
 
 ?>

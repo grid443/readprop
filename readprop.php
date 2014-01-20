@@ -5,18 +5,17 @@ function readprop($filename)
     $handler = fopen($filename, "r");
     while(!feof($handler)) 
     {
-        $array[]=fgets($handler);
-    }
-    
-    for($i=0; $i<count($array); $i++)
-    {
-        $a = explode("=", $array[$i]);
-        if(!empty($a[1]) && $a[0]{0}!="#") 
+        $str=fgets($handler);
+        if(!empty($str) && $str{0}!="#")
         {
+            $a = explode("=", $str);
             $data[$a[0]]=$a[1];
         }
     }
-    
+
+    fclose($filename);
+
     return $data;
 }
+
 ?>
