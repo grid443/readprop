@@ -5,7 +5,9 @@ function readprop($filename)
     $handler = fopen($filename, "r");
     while(!feof($handler)) 
     {
-        $str=fgets($handler);
+        $str1=fgets($handler);
+        $str=trim($str1);
+
         if(!empty($str) && $str{0}!="#")
         {
             $a = explode("=", $str);
@@ -13,7 +15,7 @@ function readprop($filename)
         }
     }
 
-    fclose($filename);
+    fclose($handler);
 
     return $data;
 }
