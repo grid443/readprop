@@ -1,9 +1,22 @@
 <?php
 
 require_once("readprop.php");
+require_once("testvalues.php");
 
-$properties = readprop("data.txt");
+$res = readprop("data.txt");
 
-print_r($properties);
+$test = testvalues($res);
+
+echo "<pre>
+Результат проверки:<br>";
+print_r($test);
+echo "</pre>";
+
+echo "<pre>
+Результат функции:<br>";
+print_r($res);
+echo "</pre>";
 
 ?>
+
+

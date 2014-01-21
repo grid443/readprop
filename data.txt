@@ -1,10 +1,11 @@
-fgs= sdgs
-fsdfg=hds
+
+1= 2
+test=test
 
 #dfhgd=fsdh
-sg=hj
+sing=ping
 #sxv= sdfg
-sgs=sdgf
+Скотч=Swatch
 
-sdfs=sfdgs
-sdgf=shsfh
+Авот=Ашот=Крот
+Ктор=Фтор
