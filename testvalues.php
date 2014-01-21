@@ -2,8 +2,6 @@
 
 function testvalues($array) {
 
-    $array = readprop("data.txt");
-
     $whatineed = Array 
     (
     "1" => "2", 
