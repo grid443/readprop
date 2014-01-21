@@ -10,7 +10,7 @@ function readprop($filename)
 
         if(!empty($str) && $str{0}!="#")
         {
-            $a = explode("=", $str);
+            $a = split("=", $str, 2);
             $data[$a[0]]=$a[1];
         }
     }
