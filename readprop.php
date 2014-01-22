@@ -5,13 +5,14 @@ function readprop($filename)
     $handler = fopen($filename, "r");
     while(!feof($handler)) 
     {
-        $str1=fgets($handler);
-        $str=trim($str1);
+        $line=fgets($handler);
+        $str = "/^([^#=]+)=([^\n\r]+)/";
 
-        if(!empty($str) && $str{0}!="#")
+        if (preg_match($str, $line, $matches))
         {
-            $a = split("=", $str, 2);
-            $data[$a[0]]=$a[1];
+           $pname = trim($matches[1]);
+           $pvalue = trim($matches[2]);
+           $data[$pname]=$pvalue;
         }
     }
 
