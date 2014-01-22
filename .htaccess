@@ -1,4 +1,4 @@
-AddDefaultCharset utf-8
+AddDefaultCharset utf8
 php_flag magic_quotes_gpc Off
 php_flag magic_quotes_runtime Off
 php_flag register_globals Off
