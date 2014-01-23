@@ -2,21 +2,21 @@
 
 function readprop($filename) 
 {
-    $handler = fopen($filename, "r");
-    while(!feof($handler)) 
+    $handler = fopen($filename, "r"); // open file for reading
+    while(!feof($handler))
     {
-        $line=fgets($handler);
-        $str = "/^([^#=]+)=([^\n\r]+)/";
+        $line=fgets($handler); //read one string from file
+        $str = "/^([^#=]+)=([^\n\r]+)/"; //regular expression for preg_match()
 
-        if (preg_match($str, $line, $matches))
+        if (preg_match($str, $line, $matches)) //drop line in array according to regular expression
         {
-           $pname = trim($matches[1]);
-           $pvalue = trim($matches[2]);
-           $data[$pname]=$pvalue;
+           $pname = trim($matches[1]);  //get name
+           $pvalue = trim($matches[2]); //get value
+           $data[$pname]=$pvalue;  //write them into Array(["name"] => "value")
         }
     }
 
-    fclose($handler);
+    fclose($handler); //close file
 
     return $data;
 }

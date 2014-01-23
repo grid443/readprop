@@ -2,7 +2,7 @@
 
 function testvalues($array) {
 
-    $whatineed = Array 
+    $whatineed = Array //pattern Array
     (
     "1" => "2", 
     "test" => "test", 
@@ -12,10 +12,10 @@ function testvalues($array) {
     "Ктор" => "Фтор" 
     );
 
-    foreach ($whatineed as $key => $value)
+    foreach ($whatineed as $key => $value) //read pattern Array in a cycle
     {
 
-        if ($whatineed[$key] == $array[$key])
+        if ($whatineed[$key] == $array[$key]) // if values are equal
         {
             $result[$key] = "true";
         }
